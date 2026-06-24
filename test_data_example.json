@@ -1,0 +1,12 @@
+{
+    "base_url": "https://api.github.com",
+    "token": "your_api_token_here",
+    "username": "your_username",
+    "new_repo": {
+        "description": "your_description",
+        "private": false
+    },
+    "updated_repo": {
+        "description": "your_updated_description"
+    }
+}

@@ -39,7 +39,6 @@ def test_create_repo(apis,load_user_data):
 
 def test_update_repo(apis, load_user_data):
     username=load_user_data["username"]
-    updated_repo_name = f"test_repo-{uuid.uuid4().hex[:6]}"
     updated_repo = {
         "description": load_user_data["updated_repo"]["description"],
     }
