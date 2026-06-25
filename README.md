@@ -21,6 +21,7 @@ A PyTest automation project that tests GitHub API endpoints for user profile, re
 
 ## Project Structure
 
+```text
 project-root/
 ├── tests/
 ├── utils/
@@ -29,6 +30,7 @@ project-root/
 ├── requirements.txt
 ├── conftest.py
 └── README.md
+```
 
 ## Prerequisites
 
@@ -45,18 +47,19 @@ Before running the project, ensure you have:
 ```bash
 git clone <repository-url>
 cd <repository-name>
+```
 
 2. Create and activate a virtual environment
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
-
+```
 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
-
+```
 ## Test Data Setup
 
 1. Copy test_data_example.json to data/test_data.json
@@ -77,7 +80,7 @@ Run all tests from the repository root:
 
 ```bash
 pytest
-
+```
 
 Reports are generated automatically into the 'reports/' folder.
 
