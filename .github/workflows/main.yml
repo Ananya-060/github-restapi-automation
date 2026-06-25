@@ -46,7 +46,7 @@ jobs:
 
       - name: Run pytest
         run: |
-          pytest --s --html=reports/report.html --self-contained-html
+          pytest -s --html=reports/report.html --self-contained-html
 
 
       - name: Upload report
