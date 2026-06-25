@@ -3,10 +3,10 @@ name: Python tests
 on:
   push:
     branches:
-     -main
+      - main
   pull_request:
-    branches: 
-     -main
+    branches:
+      - main
 
 jobs:
   test:
@@ -28,11 +28,11 @@ jobs:
 
       - name: Create test data file
         run: |
-          mkdir -p data
+          mkdir -p data reports
           cat > data/test_data.json <<'EOF'
           {
             "base_url": "https://api.github.com",
-            "token": "${{ secrets.API_TOKEN }}",
+            "token": "${{ secrets.GITHUB_API_TOKEN }}",
             "username": "Ananya-060",
             "new_repo": {
               "description": "Automated test repo",
@@ -46,10 +46,10 @@ jobs:
 
       - name: Run pytest
         run: |
-           pytest -s --html=reports.html --self-contained-html
+          pytest -s --html=reports/report.html --self-contained-html
 
       - name: Upload report
         uses: actions/upload-artifact@v4
         with:
           name: pytest-report
-          path: reports/
+          path: reports/*.html
