@@ -32,7 +32,7 @@ jobs:
           cat > data/test_data.json <<'EOF'
           {
             "base_url": "https://api.github.com",
-            "token": "${{ secrets.GITHUB_API_TOKEN }}",
+            "token": "${{ secrets.API_TOKEN }}",
             "username": "Ananya-060",
             "new_repo": {
               "description": "Automated test repo",
