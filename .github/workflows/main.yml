@@ -2,9 +2,11 @@ name: Python tests
 
 on:
   push:
-    branches: [main, master]
+    branches:
+     -main
   pull_request:
-    branches: [main, master]
+    branches: 
+     -main
 
 jobs:
   test:
@@ -17,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.9'
 
       - name: Install dependencies
         run: |
@@ -43,11 +45,11 @@ jobs:
           EOF
 
       - name: Run pytest
-        run: pytest
+        run: |
+           pytest -s --html=reports.html --self-contained-html
 
-      - name: Upload HTML reports
-        if: always()
+      - name: Upload report
         uses: actions/upload-artifact@v4
         with:
-          name: pytest-html-report
-          path: reports/*.html
+          name: pytest-report
+          path: reports/
