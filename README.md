@@ -3,14 +3,12 @@
 A PyTest automation project that tests GitHub API endpoints for user profile, repository operations, and data-driven repo management.
 
 ## Features
-
 - Retrieve GitHub user profile information
 - List repositories associated with a user account
 - Create a new GitHub repository
 - Update repository details
 - Delete a repository
-- Generate HTML test execution reports
-- Support data-driven testing through JSON configuration
+- Generate HTML test execution report
 - Execute automated test runs through Jenkins
 
 ## Tech Stack
