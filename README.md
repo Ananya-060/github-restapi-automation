@@ -8,7 +8,8 @@ A PyTest automation project that tests GitHub API endpoints for user profile, re
 - Create a new GitHub repository
 - Update repository details
 - Delete a repository
-- Generate HTML test execution report
+- Continuous integration with GitHub Actions
+- Automatic pytest execution and HTML report upload
 - Execute automated test runs through Jenkins
 
 ## Tech Stack
@@ -18,6 +19,7 @@ A PyTest automation project that tests GitHub API endpoints for user profile, re
 - requests
 - GitHub REST API
 - Jenkins
+- GitHub Actions 
 
 ## Project Structure
 
